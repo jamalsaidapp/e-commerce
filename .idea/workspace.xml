@@ -7,7 +7,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -19,6 +19,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -145,6 +148,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1q6ZLdq4lYOClHH9dJaAA5FNhBr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -157,7 +161,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -170,7 +174,7 @@
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\layouts" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.watch">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -201,7 +205,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616401946913</updated>
-      <workItem from="1616401955610" duration="13694000" />
+      <workItem from="1616401955610" duration="18591000" />
+      <workItem from="1616431064251" duration="967000" />
+      <workItem from="1616432071886" duration="5622000" />
     </task>
     <servers />
   </component>
@@ -209,6 +215,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="27" key="#Notifications" timestamp="1616437783511">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1616437783511" />
     <state x="427" y="159" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616403419898">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -217,42 +227,53 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1616403699878" />
-    <state width="1323" height="161" key="GridCell.Tab.0.bottom" timestamp="1616408636063">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1616437619086">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1616408636063" />
-    <state width="1323" height="161" key="GridCell.Tab.0.center" timestamp="1616408636063">
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1616437619086" />
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom" timestamp="1616431027233">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1616408636063" />
-    <state width="1323" height="161" key="GridCell.Tab.0.left" timestamp="1616408636063">
+    <state width="1323" height="161" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1616431027233" />
+    <state width="1323" height="161" key="GridCell.Tab.0.center" timestamp="1616431027233">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1616408636063" />
-    <state width="1323" height="161" key="GridCell.Tab.0.right" timestamp="1616408636063">
+    <state width="1323" height="161" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1616431027233" />
+    <state width="1323" height="161" key="GridCell.Tab.0.left" timestamp="1616431027233">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="161" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1616408636063" />
+    <state width="1323" height="161" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1616431027233" />
+    <state width="1323" height="161" key="GridCell.Tab.0.right" timestamp="1616431027233">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="161" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1616431027233" />
+    <state x="184" y="11" key="SettingsEditor" timestamp="1616437794194">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="11" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1616437794194" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1616409206536">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.738@0.0.1366.738" timestamp="1616409206536" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1616437000893">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1616437000893" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1616410974679">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1616410974679" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1616421675438">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1616426515526">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1616421675438" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1616426515526" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/Backend/Layouts/Sidebar.vue</url>
-          <line>43</line>
-          <properties lambdaOrdinal="-1" />
+          <line>92</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

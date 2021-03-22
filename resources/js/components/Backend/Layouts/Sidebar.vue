@@ -23,23 +23,72 @@
                                 <p>Dashboard</p>
                             </router-link >
                         </li>
-
                         <li  class="nav-item has-treeview" :class="ConfClass">
                             <a href="" class="nav-link">
                                 <i class="nav-icon far fa-cog"></i>
                                 <p>
-                                    Configuration
+                                    Paramètres
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <router-link  to="/users" class="nav-link">
+                                    <router-link  to="/Utilisateurs" class="nav-link">
                                         <i class="fal fa-users nav-icon"></i>
                                         <p>Users</p>
                                     </router-link>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li  class="nav-item has-treeview" :class="ConfClass">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon far fa-store-alt"></i>
+                                <p>
+                                    Shop
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <router-link  to="back_" class="nav-link">
+                                        <i class="fal fa-network-wired nav-icon"></i>
+                                        <p>Category </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link  to="back_" class="nav-link">
+                                        <i class="fal fa-shopping-bag nav-icon"></i>
+                                        <p>Products  </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link  to="back_" class="nav-link">
+                                        <i class="fal fa-code-branch nav-icon"></i>
+                                        <p>Brands  </p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link  to="back_" class="nav-link">
+                                        <i class="fal fa-shipping-fast nav-icon"></i>
+                                        <p>Shipping  </p>
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link to="back_" class="nav-link">
+                                <i class="nav-icon far fa-hammer"></i>
+                                <p>Orders</p>
+                            </router-link >
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link to="back_" class="nav-link">
+                                <i class="nav-icon far fa-poll"></i>
+                                <p>Reviews</p>
+                            </router-link >
                         </li>
 
                         <li class="nav-item">

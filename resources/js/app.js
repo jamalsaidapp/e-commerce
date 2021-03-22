@@ -49,7 +49,7 @@ const routes = [
     //Backend
     { path: '/back_index', component: require('./components/Backend/Index.vue').default ,name: 'back_index'},
     { path: '/profile', component: require('./components/Backend/Configuration/Users/Profile/Index.vue').default ,name: 'profile'},
-    { path: '/users', component: require('./components/Backend/Configuration/Users/Index.vue').default ,name: 'users'},
+    { path: '/Utilisateurs', component: require('./components/Backend/Configuration/Users/Index.vue').default ,name: 'Utilisateurs'},
 ];
 
 const router = new VueRouter({
