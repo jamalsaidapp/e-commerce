@@ -1,0 +1,108 @@
+<template>
+    <div>
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar nav-compact sidebar-dark-primary elevation-4" >
+            <!-- Brand Logo -->
+            <a href="" class="brand-link elevation-4" style="font-size: initial;">
+                <img src="/img/logo.png"
+                     alt="AdminLTE Logo"
+                     class="brand-image"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">E-Commerce | <small>Panel</small></span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar scrlbar" >
+                <!-- Sidebar Menu -->
+                <nav class="mt-3">
+                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent text-sm" data-widget="treeview" role="menu" data-accordion="true">
+
+                        <li class="nav-item">
+                            <router-link  to="/back_index" class="nav-link">
+                                <i class="nav-icon far fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
+                            </router-link >
+                        </li>
+
+                        <li  class="nav-item has-treeview" :class="ConfClass">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon far fa-cog"></i>
+                                <p>
+                                    Configuration
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <router-link  to="/users" class="nav-link">
+                                        <i class="fal fa-users nav-icon"></i>
+                                        <p>Users</p>
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <router-link to="/profile" class="nav-link">
+                                <i class="nav-icon far fa-user"></i>
+                                <p>Mon Profile</p>
+                            </router-link >
+                        </li>
+
+                        <li class="nav-item" @click.prevent="logout()">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon far fa-sign-out"></i>
+                                <p>Se Déconnecter</p>
+                            </a >
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+    </div>
+</template>
+<script>
+    export default {
+        name: "Sidebar",
+        computed: {
+            ConfClass() {
+                let routes = ['users', 'projets', 'roles'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            GPClass() {
+                let routes = ['ordinateurs', 'affectation', 'historique'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            RPClass() {
+                let routes = ['rapport_T', 'rapport_P'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            GSMClass() {
+                let routes = ['sim-list', 'sim-affectation', 'sim-historique'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            PhoneClass() {
+                let routes = ['phone-list', 'phone-affectation', 'phone-historique'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            GSM_PhoneClass() {
+                let routes = ['phone-list', 'phone-affectation', 'phone-historique', 'sim-list', 'sim-affectation', 'sim-historique'];
+                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
+            },
+            logout() {
+                this.$confirm('Are you sure you want to log out?', 'Attention !', {
+                    confirmButtonText: 'Oui', cancelButtonText: 'Non', type: 'warning'
+                }).then(() => {
+                    axios.post('/logout').then(() => {
+                        window.location.replace("/");
+                    });
+
+                })
+            }
+        }
+    }
+</script>
+
