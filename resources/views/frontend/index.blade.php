@@ -18,6 +18,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@auth
+    <!-- TokenS -->
+        <script>
+            window.Tokens = @json(['csrf' => csrf_token(), 'user' => auth()->user()]);
+        </script>
+@endauth
+@guest
+    <!-- TokenS -->
+        <script>
+            window.Tokens = @json(['csrf' => '',  'user' =>'']);
+        </script>
+    @endguest
 </head>
 <body>
     <div id="app">

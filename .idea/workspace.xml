@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fbb588d-1b17-4131-ad73-63017a63139c" name="Default Changelist" comment="" />
+    <list default="true" id="4fbb588d-1b17-4131-ad73-63017a63139c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Brands.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Cart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Categories.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Orders.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Products.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Reviews.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Shipping.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +164,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1q6ZLdq4lYOClHH9dJaAA5FNhBr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -157,21 +175,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/Backend/Auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/Backend/Shop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\e-commerce\resources\views\backend" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Shop" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Auth" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Configuration" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\e-commerce\resources\views\backend" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -259,14 +278,20 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1616437000893" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1616410974679">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="581" y="41" width="758" height="957" key="find.popup" timestamp="1616443280791">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="41" width="758" height="957" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616443280791" />
+    <state x="476" y="233" key="run.anything.popup" timestamp="1616442179568">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1616410974679" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1616426515526">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="476" y="233" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616442179568" />
+    <state x="486" y="83" width="945" height="956" key="search.everywhere.popup" timestamp="1616443709418">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1616426515526" />
+    <state x="486" y="83" width="945" height="956" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616443709418" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

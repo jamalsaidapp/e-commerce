@@ -24,7 +24,7 @@
                             </router-link >
                         </li>
                         <li  class="nav-item has-treeview" :class="ConfClass">
-                            <a href="" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-cog"></i>
                                 <p>
                                     Paramètres
@@ -41,8 +41,8 @@
                             </ul>
                         </li>
 
-                        <li  class="nav-item has-treeview" :class="ConfClass">
-                            <a href="" class="nav-link">
+                        <li  class="nav-item has-treeview" :class="ShopClass">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-store-alt"></i>
                                 <p>
                                     Shop
@@ -51,25 +51,25 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <router-link  to="back_" class="nav-link">
+                                    <router-link  to="back_categories" class="nav-link">
                                         <i class="fal fa-network-wired nav-icon"></i>
                                         <p>Category </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link  to="back_" class="nav-link">
+                                    <router-link  to="back_products" class="nav-link">
                                         <i class="fal fa-shopping-bag nav-icon"></i>
                                         <p>Products  </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link  to="back_" class="nav-link">
+                                    <router-link  to="back_brands" class="nav-link">
                                         <i class="fal fa-code-branch nav-icon"></i>
                                         <p>Brands  </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link  to="back_" class="nav-link">
+                                    <router-link  to="back_shipping" class="nav-link">
                                         <i class="fal fa-shipping-fast nav-icon"></i>
                                         <p>Shipping  </p>
                                     </router-link>
@@ -78,14 +78,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <router-link to="back_" class="nav-link">
+                            <router-link to="back_orders" class="nav-link">
                                 <i class="nav-icon far fa-hammer"></i>
                                 <p>Orders</p>
                             </router-link >
                         </li>
 
                         <li class="nav-item">
-                            <router-link to="back_" class="nav-link">
+                            <router-link to="back_reviews" class="nav-link">
                                 <i class="nav-icon far fa-poll"></i>
                                 <p>Reviews</p>
                             </router-link >
@@ -118,27 +118,12 @@
         name: "Sidebar",
         computed: {
             ConfClass() {
-                let routes = ['users', 'projets', 'roles'];
+                let routes = ['Utilisateurs', '', ''];
                 return {'menu-open': routes.includes(this.$router.currentRoute.name)}
             },
-            GPClass() {
-                let routes = ['ordinateurs', 'affectation', 'historique'];
-                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
-            },
-            RPClass() {
-                let routes = ['rapport_T', 'rapport_P'];
-                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
-            },
-            GSMClass() {
-                let routes = ['sim-list', 'sim-affectation', 'sim-historique'];
-                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
-            },
-            PhoneClass() {
-                let routes = ['phone-list', 'phone-affectation', 'phone-historique'];
-                return {'menu-open': routes.includes(this.$router.currentRoute.name)}
-            },
-            GSM_PhoneClass() {
-                let routes = ['phone-list', 'phone-affectation', 'phone-historique', 'sim-list', 'sim-affectation', 'sim-historique'];
+
+            ShopClass() {
+                let routes = ['categories', 'products', 'brands', 'shipping'];
                 return {'menu-open': routes.includes(this.$router.currentRoute.name)}
             },
             logout() {
