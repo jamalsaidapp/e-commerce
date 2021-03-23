@@ -68798,4 +68798,13 @@ button.dropdown-item {
   padding: 6px !important;
 }
 
+.modal_c_body {
+  padding-bottom: 5px;
+  padding-top: 25px;
+  border: 1px solid #b0b1b3;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
 

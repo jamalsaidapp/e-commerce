@@ -25,7 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('provider_id')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->rememberToken()->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
     }
 
