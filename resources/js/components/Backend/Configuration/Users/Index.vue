@@ -138,17 +138,13 @@
 </template>
 
 <script>
-// import  Custom from './Columns/Custom'
-import Vue from 'vue'
 export default {
-    components :{
-        // Custom
-    },
+
     data() {
         return {
             tableData:[],
             columns: [
-                {field: 'id', label: '#', width: '50',sortable: true, numeric: true, centered: true, visible: true},
+                {field: 'id', label: '#', width: '50',sortable: true, numeric: true, centered: true, visible: true },
                 {field: 'name', label: 'Utilisateur', width: '200', centered: true, sortable : true, visible: true},
                 {field: 'email', label: 'Email', width: '250', sortable: true, centered: true, visible: true},
                 {field: 'created_at', label: 'Date Création', width: '150', sortable: true, centered: true, visible: true},
@@ -194,7 +190,6 @@ export default {
             WinWidth : ''
         }
     },
-
     methods:{
         //Table Functions
         resetFiltter(){
@@ -208,7 +203,7 @@ export default {
                         item.name && item.name.toLowerCase().includes(v.toLowerCase()) ||
                         item.email && item.email.toLowerCase().includes(v.toLowerCase()) ||
                         item.id && item.id.toString().toLowerCase().includes(v.toLowerCase()) ||
-                        item.created_at && (Vue.filter('myDate')(item.created_at)).toLowerCase().includes(v.toLowerCase()) ||
+                        item.created_at && item.created_at.toString().toLowerCase().includes(v.toLowerCase()) ||
                         item.role && item.role.toLowerCase().includes(v.toLowerCase())
                     )
                 });
@@ -226,7 +221,6 @@ export default {
         enableResFilter(val){
             this.enableClearFilter = val.length > 0;
         },
-
         //Modal Function
         openmodel(type,val){
             if (type === 'add') {

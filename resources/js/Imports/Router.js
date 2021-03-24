@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 let routes = [
     //Backend
     { path: '/back_index', component: require('../components/Backend/Index.vue').default ,name: 'back_index'},
-    { path: '/profile', component: require('../components/Backend/Configuration/Users/Profile/Index.vue').default ,name: 'profile'},
+    { path: '/profile', component: require('../components/Backend/Configuration/Profile/Index.vue').default ,name: 'profile'},
     { path: '/Utilisateurs', component: require('../components/Backend/Configuration/Users/Index.vue').default ,name: 'Utilisateurs'},
     //Shop
     { path: '/back_categories',component: require('../components/Backend/Shop/Categories').default ,name: 'categories'},

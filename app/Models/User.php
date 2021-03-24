@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+Use Carbon\Carbon;
 use Laravel\Passport\HasApiTokens;
 
 
@@ -18,14 +19,14 @@ class User extends Authenticatable
      *
      * @var array
      */
+
     protected $fillable = [
         'name',
         'email',
         'password',
         'role',
         'status',
-        'created_at',
-        'updated_at'
+        'photo'
     ];
 
     /**
@@ -45,6 +46,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'created_at' => "datetime:d/m/Y",
     ];
+
 
 }

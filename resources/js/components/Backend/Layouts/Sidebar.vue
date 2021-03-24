@@ -10,7 +10,6 @@
                      style="opacity: .8">
                 <span class="brand-text font-weight-light">E-Commerce | <small>Panel</small></span>
             </a>
-
             <!-- Sidebar -->
             <div class="sidebar scrlbar" >
                 <!-- Sidebar Menu -->
@@ -53,13 +52,13 @@
                                 <li class="nav-item">
                                     <router-link  to="back_categories" class="nav-link">
                                         <i class="fal fa-network-wired nav-icon"></i>
-                                        <p>Category </p>
+                                        <p>Categories </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
                                     <router-link  to="back_products" class="nav-link">
                                         <i class="fal fa-shopping-bag nav-icon"></i>
-                                        <p>Products  </p>
+                                        <p>Products </p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">

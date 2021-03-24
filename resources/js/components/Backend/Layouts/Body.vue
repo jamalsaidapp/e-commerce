@@ -19,7 +19,7 @@ export default {
         return{
             WinWidth:'',
             events: ['click','mousemove','mousedown', 'scroll', 'keypress','load'],
-            warninigTimer : null,
+            warningTimer : null,
             logoutTimer :null,
             showWarning : false,
         }
@@ -43,7 +43,7 @@ export default {
 
     methods:{
         setTimer(){
-            this.warninigTimer = setTimeout(() =>this.warningMessage(),   29 * 60 * 1000);
+            this.warningTimer = setTimeout(() =>this.warningMessage(),   29 * 60 * 1000);
             this.logoutTimer = setTimeout(() =>this.logoutuser(),  30 * 60 * 1000);
         },
         warningMessage(){
@@ -56,7 +56,7 @@ export default {
             });
         },
         resetTimer(){
-            clearTimeout(this.warninigTimer);
+            clearTimeout(this.warningTimer);
             clearTimeout(this.logoutTimer);
             this.setTimer();
         },

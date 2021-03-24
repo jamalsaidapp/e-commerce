@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -70,6 +71,40 @@ class UserController extends Controller
                 'password' => Hash::make($request->password)
             ]);
         }
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $user = auth('api')->user();
+        $path = public_path('Users/'.$user->id.'/Profile/');
+
+
+        $this->validate($request,[
+            'name' => 'required|string|max:50',
+            'email' => 'required|string|email|max:191|unique:users,email,'.$user->id,
+            'password' => 'sometimes|string|min:6'
+        ]);
+
+        $currentPhoto = $user->photo;
+
+        if($request->photo != $currentPhoto ){
+            $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
+
+            Image::make($request->photo)->save($path.$name);
+            $request->merge(['photo' => $name]);
+
+            $userPhoto = $path.$currentPhoto;
+            if(file_exists($userPhoto)){
+                @unlink($userPhoto);
+            }
+        }
+
+        if(!empty($request->password)){
+            $request->merge(['password' => Hash::make($request['password'])]);
+        }
+
+        $user->update($request->all());
+        return ['message' => "Success"];
     }
 
     public function destroy($id)

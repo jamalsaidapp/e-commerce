@@ -11,7 +11,7 @@ Vue.component('footerr', require('../components/Backend/Layouts/Footer').default
 Vue.component('login', require('../components/Backend/Auth/Login').default);
 
 //Lib
-Vue.component('j-data-table',require('../Lib/JDataTable').default);
+Vue.component('j-data-table',require('../Lib/JTable/JDataTable').default);
 
 // Errors
 Vue.component('error-404',require('../components/Errors/Error-404.vue').default);
