@@ -9,7 +9,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a tag="a" href="" @click.prevent="$router.push('back_index')">E-Commerce</a></li>
-                            <li class="breadcrumb-item active">Usesr</li>
+                            <li class="breadcrumb-item active">Users</li>
                         </ol>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                                                 </b-checkbox>
                                             </el-dropdown-menu>
                                         </el-dropdown>
-                                        <b-button type="is-danger" size="is-small" icon-right="delete" @click="deleteAllRow" rounded
+                                        <b-button type="is-danger" size="is-small" icon-right="delete" @click="MultiUserDelete" rounded
                                                   v-if="checkedRows.length > 0 && tableData.length > 0" />
                                         <b-button type="is-secondary" size="is-small" icon-right="refresh" @click="loadData" rounded />
                                         <b-button type="is-primary" size="is-small" icon-right="plus" @click="openmodel('add',null)" rounded />
@@ -278,33 +278,40 @@ export default {
             })
         },
         deleteRow(id){
-            this.$confirm('Voulez-vous Supprimer ce Element ?', 'Suppression', {
-                confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
-            }).then(() => {
-                this.user.delete('api/user/'+id).then(()=>{
-                    this.loadData();
-                    toast.fire({icon: 'success', title: 'Utilisteur Supprimer !!'});
-                }).catch(()=> {
-                    toast.fire("Failed!", "There was something wronge.", "warning");
-                });
-            })
+           if (id !== this.$Auth.id) {
+               this.$confirm('Voulez-vous Supprimer ce Element ?', 'Suppression', {
+                   confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
+               }).then(() => {
+                   this.user.delete('api/user/'+id).then(()=>{
+                       this.loadData();
+                       toast.fire({icon: 'success', title: 'Utilisteur Supprimer !!'});
+                   }).catch(()=> {
+                       toast.fire("Failed!", "There was something wronge.", "warning");
+                   });
+               })
+           }else{
+               toast.fire("Failed!", "Impossible Compte Connecter", "warning");
+           }
         },
-        deleteAllRow(){
+        MultiUserDelete(){
             let ids = this.$R.pluck('id')(this.checkedRows);
-            this.$confirm('Voulez-vous Supprimer ces Elements ?', 'Suppression', {
-                confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
-            }).then(() => {
-                let data = {ids : ids};
-                axios.post('api/',data).then(()=>{
-                    this.loadData();
-                    this.checkedRows =[];
-                    toast.fire({icon: 'success', title: 'SIMs Supprimer !!'});
-                }).catch(()=> {
-                    toast.fire("Failed!", "There was something wronge.", "warning");
+            if (!ids.includes(this.$Auth.id)) {
+                this.$confirm('Voulez-vous Supprimer ces Elements ?', 'Suppression', {
+                    confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
+                }).then(() => {
+                    let data = {ids : ids};
+                    axios.post('api/MultiUserDelete',data).then(()=>{
+                        this.loadData();
+                        this.checkedRows =[];
+                        toast.fire({icon: 'success', title: 'SIMs Supprimer !!'});
+                    }).catch(()=> {
+                        toast.fire("Failed!", "There was something wronge.", "warning");
+                    });
                 });
-            });
+            }else{
+                toast.fire("Failed!", "Impossible Compte Connecter", "warning");
+            }
         },
-
         //Others
         ResetError(id){
             this.user.errors.clear(id)
@@ -320,7 +327,7 @@ export default {
     destroyed() {
         window.removeEventListener('resize', this.handleResize);
     },
-    mounted() {
+    beforeMount() {
         this.loadData();
     }
 }

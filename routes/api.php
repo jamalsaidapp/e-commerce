@@ -12,4 +12,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //User Routes
 Route::apiResource('user',App\Http\Controllers\API\UserController::class);
 Route::get('profile', [App\Http\Controllers\API\UserController::class, 'profile']);
+Route::get('MultiUserDelete', [App\Http\Controllers\API\UserController::class, 'MultiUserDelete']);
+
 

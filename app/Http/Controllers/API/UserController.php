@@ -18,6 +18,7 @@ class UserController extends Controller
     {
         return User::latest('id')->get();
     }
+
     public function profile()
     {
         return  auth('api')->user();
@@ -53,7 +54,8 @@ class UserController extends Controller
             'name' => 'required|string|max:50',
             'email' => 'required|string|email|max:191|unique:users,email,'.$user->id,
             'password' => 'sometimes|string|min:6',
-            'Role' => 'required',
+            'role' => 'required',
+            'status' => 'required'
         ]);
 
         $user->update([
@@ -77,7 +79,8 @@ class UserController extends Controller
 //        $this->DeleteUserFolder($id);
         return ['message' => 'User and Folder Deleted'];
     }
-    public function multiDelete(Request $request)
+
+    public function MultiUserDelete(Request $request)
     {
         $ids = $request->ids;
         return  User::destroy($ids);
