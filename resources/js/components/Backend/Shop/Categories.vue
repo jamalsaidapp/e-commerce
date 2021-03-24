@@ -260,7 +260,6 @@
             })
         },
         deleteRow(id){
-            if (id !== this.$Auth.id) {
                 this.$confirm('Voulez-vous Supprimer ce Element ?', 'Suppression', {
                     confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
                 }).then(() => {
@@ -271,13 +270,10 @@
                         toast.fire("Failed!", "There was something wronge.", "warning");
                     });
                 })
-            }else{
-                toast.fire("Failed!", "Impossible Compte Connecter", "warning");
             }
         },
         MultiUserDelete(){
             let ids = this.$R.pluck('id')(this.checkedRows);
-            if (!ids.includes(this.$Auth.id)) {
                 this.$confirm('Voulez-vous Supprimer ces Elements ?', 'Suppression', {
                     confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
                 }).then(() => {
@@ -290,8 +286,6 @@
                         toast.fire("Failed!", "There was something wronge.", "warning");
                     });
                 });
-            }else{
-                toast.fire("Failed!", "Impossible Compte Connecter", "warning");
             }
         },
         //Others

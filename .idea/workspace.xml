@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fbb588d-1b17-4131-ad73-63017a63139c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/CategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Categorie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1616587596.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/e-commerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/e-commerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Users/1/Profile/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Imports/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Imports/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Lib/JDataTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Lib/JTable/JDataTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Profile/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Body.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Categories.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +186,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="X:/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -213,20 +196,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Auth" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components" />
+      <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Auth" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Configuration" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\e-commerce\resources\js\Lib\JTable" />
-      <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Configuration" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\Lib" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\backend" />
     </key>
@@ -273,9 +254,7 @@
       <workItem from="1616492424582" duration="592000" />
       <workItem from="1616496254902" duration="589000" />
       <workItem from="1616497453570" duration="716000" />
-      <workItem from="1616498208723" duration="20470000" />
-      <workItem from="1616583021391" duration="5180000" />
-      <workItem from="1616600994504" duration="4250000" />
+      <workItem from="1616498208723" duration="11766000" />
     </task>
     <task id="LOCAL-00001" summary="Add user CRUD Table And app.js Organize">
       <created>1616518212041</created>
@@ -284,28 +263,7 @@
       <option name="project" value="LOCAL" />
       <updated>1616518212041</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add user CRUD Table And app.js Organize">
-      <created>1616518585505</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616518585505</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add user CRUD Table And app.js Organize">
-      <created>1616518728827</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1616518728827</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add Auto Logout">
-      <created>1616577608441</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1616577608441</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,8 +284,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add user CRUD Table And app.js Organize" />
-    <MESSAGE value="Add Auto Logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Auto Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user CRUD Table And app.js Organize" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
