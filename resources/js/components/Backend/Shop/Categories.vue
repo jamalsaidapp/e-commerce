@@ -270,10 +270,10 @@
                         toast.fire("Failed!", "There was something wronge.", "warning");
                     });
                 })
-            }
         },
         MultiUserDelete(){
             let ids = this.$R.pluck('id')(this.checkedRows);
+
                 this.$confirm('Voulez-vous Supprimer ces Elements ?', 'Suppression', {
                     confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
                 }).then(() => {
@@ -286,7 +286,6 @@
                         toast.fire("Failed!", "There was something wronge.", "warning");
                     });
                 });
-            }
         },
         //Others
         ResetError(id){
