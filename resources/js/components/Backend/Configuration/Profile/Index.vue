@@ -15,7 +15,7 @@
                   <span class="edit-profile-img ml-5 text-success" v-if="imagechanged" @click="changeImage()">
                         <i class="fas fa-check"></i>
                   </span>
-                  <img :src="this.form.photo" class="ht-100 img-circle elevation-2 wd-100" alt="User Avatar" v-if="imagechanged">
+                  <img :src="this.photo" class="ht-100 img-circle elevation-2 wd-100" alt="User Avatar" v-if="imagechanged">
                   <img v-else class="ht-100 img-circle elevation-2 wd-100" :src="getProfilePhoto()" alt="User Avatar">
               </div>
               <div class="card-footer">
@@ -106,10 +106,11 @@
                     name : '',
                     email: '',
                     password: '',
+                     photo:'',
                     role:'',
-                    photo: '',
                     created_at: ''
                 }),
+                photo:''
             }
         },
         methods: {
@@ -157,18 +158,26 @@
 
                 reader.onloadend = (file) => {
                     this.imagechanged = true;
-                    this.form.photo = reader.result;
+                    this.photo = reader.result;
                 };
                 reader.readAsDataURL(file);
+            },
+            changeImage(){
+                axios.post('api/updateUserImage', {img : this.photo}).then(()=>{
+                    this.$root.$emit('ReloadInfo');
+                });
+            },
+            loadProfile(){
+                axios.get("api/profile").then(({data}) => {
+                    this.form.fill(data);
+                });
             },
             ResetError(id){
                 this.form.errors.clear(id)
             },
         },
          beforeMount() {
-            axios.get("api/profile").then(({data}) => {
-                this.form.fill(data);
-                });
+            this.loadProfile();
         },
     }
 </script>

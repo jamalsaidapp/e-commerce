@@ -64,6 +64,21 @@ class UserServiceImpl implements \App\Services\UserService
 //    Profile Function
     public function UpdateUserImage($image)
     {
+        $user = auth('api')->user();
+        $path = public_path('Users/' . $user->id . '/Profile/');
+        $currentPhoto = $user->photo;
 
+        if (isset($image)) {
+            if ($image != $currentPhoto) {
+                $name = time() . '.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
+
+                Image::make($image)->save($path . $name);
+                $user->update(['photo' => $name]);
+                $userPhoto = $path . $currentPhoto;
+                if (file_exists($userPhoto)) {
+                    @unlink($userPhoto);
+                }
+            }
+        }
     }
 }

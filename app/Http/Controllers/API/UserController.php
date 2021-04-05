@@ -18,7 +18,6 @@ class UserController extends Controller
 
     public function __construct(UserService $userService)
     {
-        $this->middleware('auth:api', ['except' => []]);
         $this->userService = $userService;
     }
 
@@ -32,7 +31,7 @@ class UserController extends Controller
         return $this->userService->CreateUser($request->validated());
     }
 
-    public function update(UserUpdateRequest $request,User $user)
+    public function update(UserUpdateRequest $request, User $user)
     {
         return $this->userService->UpdateUser($request->validated(), $user);
     }
@@ -42,14 +41,19 @@ class UserController extends Controller
         return $this->userService->DeleteUser($user);
     }
 
-    public function MultiUserDelete(Request $request)
+    public function MultiUserDelete(Request $request): int
     {
         return User::destroy($request->ids);
     }
 
     public function updateProfile(UserUpdateProfileRequest $request)
     {
-        return $this->userService->UpdateUser($request->validated(),auth()->user());
+        return $this->userService->UpdateUser($request->validated(), auth()->user());
+    }
+
+    public function updateUserImage(Request $request)
+    {
+        return $this->userService->UpdateUserImage($request->img);
     }
 
 }
