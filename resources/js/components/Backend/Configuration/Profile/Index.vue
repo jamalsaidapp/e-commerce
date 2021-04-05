@@ -8,6 +8,13 @@
                 <!--<h3 class="widget-user-username text-right" >{{this.form.name}}</h3>-->
               </div>
               <div class="widget-user-image">
+                  <span class="edit-profile-img" onclick="document.getElementById('user_image').click()">
+                      <input type="file" @change="checkimageSize" id="user_image" name="photo" style="display: none">
+                        <i class="fas fa-edit"></i>
+                  </span>
+                  <span class="edit-profile-img ml-5 text-success" v-if="imagechanged" @click="changeImage()">
+                        <i class="fas fa-check"></i>
+                  </span>
                   <img :src="this.form.photo" class="ht-100 img-circle elevation-2 wd-100" alt="User Avatar" v-if="imagechanged">
                   <img v-else class="ht-100 img-circle elevation-2 wd-100" :src="getProfilePhoto()" alt="User Avatar">
               </div>
@@ -73,10 +80,10 @@
                                     </b-field>
                                 </section>
                                 <footer class="mt-3 mx-auto">
-                                        <span class="btn btn-outline-secondary btn-file btn-sm ">
-                                                <i class="fas fa-image"> </i> Charger Une image
-                                                <input type="file" @change="checkimageSize" name="photo">
-                                         </span>
+<!--                                        <span class="btn btn-outline-secondary btn-file btn-sm ">-->
+<!--                                                <i class="fas fa-image"> </i> Charger Une image-->
+<!--                                                <input type="file" @change="checkimageSize" name="photo">-->
+<!--                                         </span>-->
                                     <b-button class="float-right" @click.prevent="updateInfo()" label="Enregistrer" type="is-success" size="is-small"/>
                                 </footer>
                             </form>
@@ -165,3 +172,13 @@
         },
     }
 </script>
+<style scoped>
+.edit-profile-img{
+    position: absolute;
+    color: #343a40;
+    cursor: pointer;
+    top: 55px;
+    left: 100px;
+    font-size: 18px;
+}
+</style>

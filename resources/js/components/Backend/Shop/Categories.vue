@@ -149,10 +149,6 @@
                 {value: 'active', label: 'Active'},
                 {value: 'inactive', label: 'Inactive',}
             ],
-            Roles: [
-                {value: 'user', label: 'User'},
-                {value: 'admin', label: 'Admin',}
-            ],
             perPages: [
                 {value: 7, label: '7'},
                 {value: 15, label: '15',},

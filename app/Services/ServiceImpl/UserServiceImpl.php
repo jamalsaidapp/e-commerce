@@ -5,9 +5,12 @@ namespace App\Services\ServiceImpl;
 
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
 
 class UserServiceImpl implements \App\Services\UserService
 {
+//    User CRUD
     public function GetUsers()
     {
         return User::latest('id')->get();
@@ -15,27 +18,24 @@ class UserServiceImpl implements \App\Services\UserService
 
     public function CreateUser($data)
     {
-        $newData = data_set($data, 'password', \Hash::make($data['password']));
+        $newData = data_set($data, 'password', Hash::make($data['password']));
         $id = User::insertGetId($newData);
         $this->CreateUserFolder($id . '/Profile');
     }
 
-    public function UpdateUser($data, $id)
+    public function UpdateUser($data, $user)
     {
-        $user = User::findOrFail($id);
-
         if (isset($data['password'])) {
-            $newData = data_set($data, 'password', \Hash::make($data['password']));
+            $newData = data_set($data, 'password', Hash::make($data['password']));
             return $user->update($newData);
         }
         return $user->update($data);
     }
 
-    public function DeleteUser( $id)
+    public function DeleteUser($user): array
     {
-        $user = User::findOrFail($id);
         $user->delete();
-        $this->DeleteUserFolder($id);
+        $this->DeleteUserFolder($user->id);
         return ['message' => 'User and Folder Deleted'];
     }
 
@@ -61,5 +61,9 @@ class UserServiceImpl implements \App\Services\UserService
         }
     }
 
+//    Profile Function
+    public function UpdateUserImage($image)
+    {
 
+    }
 }
