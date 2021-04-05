@@ -97,7 +97,7 @@
                     </el-col>
                     <el-col :span="12">
                         <b-field label-position="on-border" label="Email" :type="{ 'is-danger': user.errors.has('email') }">
-                            <b-input size="is-small" type="search" v-model="user.email" :disabled="viewmode" @input="ResetError('email')"></b-input>
+                            <b-input size="is-small" type="email" v-model="user.email" :disabled="viewmode" @input="ResetError('email')"></b-input>
                         </b-field>
                         <form-error :form="user" label="email"></form-error>
                     </el-col>

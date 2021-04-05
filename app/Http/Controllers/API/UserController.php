@@ -3,103 +3,72 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\User\UserCreateRequest;
+use App\Http\Requests\User\UserUpdateRequest;
 use App\Models\User;
+use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
-    public function __construct()
+
+    protected $userService;
+
+    public function __construct(UserService $userService)
     {
-        $this->middleware('auth:api',['except' => []]);
+        $this->middleware('auth:api', ['except' => []]);
+        $this->userService = $userService;
     }
 
     public function index()
     {
-        return User::latest('id')->get();
+        return $this->userService->GetUsers();
     }
 
-    public function profile()
+    public function store(UserCreateRequest $request)
     {
-        return  auth('api')->user();
-
+        return $this->userService->CreateUser($request->validated());
     }
 
-    public function store(Request $request){
-
-        $this->validate($request,[
-            'name' => 'required|string|max:50',
-            'email' => 'required|string|email|max:50|unique:users',
-            'password' => 'required|string|min:6',
-
-        ]);
-
-        $id =  User::insertGetId([
-            'name' => $request->name,
-            'email' => $request->email,
-            'status' => $request->status,
-            'role' => $request->role,
-            'password' => Hash::make($request['password']),
-        ]);
-//        $id =  User::insertGetId($request->all());
-
-//        $this->CreateUserFolder($id.'/Profile');
-    }
-
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
-        $user = User::findOrFail($id);
+        return $this->userService->UpdateUser($request->validated(), $id);
+    }
 
-        $this->validate($request,[
-            'name' => 'required|string|max:50',
-            'email' => 'required|string|email|max:191|unique:users,email,'.$user->id,
-            'password' => 'sometimes|string|min:6',
-            'role' => 'required',
-            'status' => 'required'
-        ]);
-
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'status' => $request->status,
-            'role' => $request->role,
-        ]);
-
-        if($request->has('password')) {
-            $user->update([
-                'password' => Hash::make($request->password)
-            ]);
-        }
+    public function destroy($id)
+    {
+        return $this->userService->DeleteUser($id);
     }
 
     public function updateProfile(Request $request)
     {
         $user = auth('api')->user();
-        $path = public_path('Users/'.$user->id.'/Profile/');
+        $path = public_path('Users/' . $user->id . '/Profile/');
 
 
-        $this->validate($request,[
+        $this->validate($request, [
             'name' => 'required|string|max:50',
-            'email' => 'required|string|email|max:191|unique:users,email,'.$user->id,
+            'email' => 'required|string|email|max:191|unique:users,email,' . $user->id,
             'password' => 'sometimes|string|min:6'
         ]);
 
         $currentPhoto = $user->photo;
 
-        if($request->photo != $currentPhoto ){
-            $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
+        if ($request->photo != $currentPhoto) {
+            $name = time() . '.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
 
-            Image::make($request->photo)->save($path.$name);
+            Image::make($request->photo)->save($path . $name);
             $request->merge(['photo' => $name]);
 
-            $userPhoto = $path.$currentPhoto;
-            if(file_exists($userPhoto)){
+            $userPhoto = $path . $currentPhoto;
+            if (file_exists($userPhoto)) {
                 @unlink($userPhoto);
             }
         }
 
-        if(!empty($request->password)){
+        if (!empty($request->password)) {
             $request->merge(['password' => Hash::make($request['password'])]);
         }
 
@@ -107,42 +76,38 @@ class UserController extends Controller
         return ['message' => "Success"];
     }
 
-    public function destroy($id)
+
+    public function profile()
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-//        $this->DeleteUserFolder($id);
-        return ['message' => 'User and Folder Deleted'];
+        return auth('api')->user();
+
     }
 
     public function MultiUserDelete(Request $request)
     {
         $ids = $request->ids;
-        return  User::destroy($ids);
+        return User::destroy($ids);
     }
 
     public static function CreateUserFolder($id): bool
     {
-        $path = public_path('/Users/' .$id);
+        $path = public_path('/Users/' . $id);
 
-        if (! \File::exists($path))
-        {
+        if (!\File::exists($path)) {
             return \File::makeDirectory($path, 0777, true, true);
-        }
-        else{
+        } else {
             return false;
         }
     }
+
     public static function DeleteUserFolder($id): bool
     {
-        $path = public_path('/Users/' .$id);
+        $path = public_path('/Users/' . $id);
 
-        if ( \File::exists($path))
-        {
+        if (\File::exists($path)) {
             return \File::deleteDirectory($path);
-        }
-        else{
-            return false ;
+        } else {
+            return false;
         }
     }
 }
