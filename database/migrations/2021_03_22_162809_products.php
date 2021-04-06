@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class Products extends Migration
@@ -13,6 +14,7 @@ class Products extends Migration
      */
     public function up()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
         Schema::create('products', function (Blueprint $table) {
             $table->id();
@@ -28,9 +30,10 @@ class Products extends Migration
             $table->float('discount')->nullable();
             $table->smallInteger('quantity');
             $table->foreignId('products_categories_id')->nullable()->constrained()->references('id')->on('categories')->onDelete('SET NULL');
-//            $table->foreignId('products_tags_id')->nullable()->constrained()->references('id')->on('tags')->onDelete('SET NULL');
+            $table->foreignId('products_tags_id')->nullable()->constrained()->references('id')->on('tags')->onDelete('SET NULL');
             $table->timestamps();
         });
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
     }
 
