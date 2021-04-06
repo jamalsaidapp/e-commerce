@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d4b183-c075-4f41-856f-5f654ea66577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_103303_products_categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_142737_tags.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_143720_products_reviews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1617701605.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1617739173.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_161510_brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_142701_products_tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_162809_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_162809_products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_163327_orders.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_163335_carts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/UserCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/UserCreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/UserUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/UserUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4fbb588d-1b17-4131-ad73-63017a63139c" name="Default Changelist" comment="" />
+      <changelist id="16d4b183-c075-4f41-856f-5f654ea66577" name="Default Changelist" comment="" />
       <created>1616401946913</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -268,6 +267,7 @@
       <workItem from="1616496254902" duration="589000" />
       <workItem from="1616497453570" duration="716000" />
       <workItem from="1616498208723" duration="11766000" />
+      <workItem from="1617739956126" duration="2720000" />
     </task>
     <task id="LOCAL-00001" summary="Add user CRUD Table And app.js Organize">
       <created>1616518212041</created>

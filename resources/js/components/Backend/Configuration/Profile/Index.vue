@@ -31,7 +31,7 @@
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
                       <h5 class="description-header">Utilisateur</h5>
-                      <span class="description-text">{{this.form.name}}</span>
+                      <span class="description-text">{{this.form.username}}</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -66,8 +66,8 @@
                         <div class="card-body">
                             <form action="">
                                 <section class="form-profile">
-                                    <b-field label="Nom & Prénom" horizontal :type="{'is-danger':form.errors.get('name')}">
-                                        <b-input v-model="form.name" type="search" placeholder="Nom & Prénom" size="is-small" icon-pack="fas" icon="user" @input="ResetError('name')" style="width:240px" required />
+                                    <b-field label="Nom & Prénom" horizontal :type="{'is-danger':form.errors.get('username')}">
+                                        <b-input v-model="form.username" type="search" placeholder="Nom & Prénom" size="is-small" icon-pack="fas" icon="user" @input="ResetError('username')" style="width:240px" required />
                                     </b-field>
                                     <b-field label="Email" horizontal :type="{'is-danger':form.errors.get('email')}" >
                                         <b-input v-model="form.email" type="email" placeholder="Votre email" size="is-small" icon="email" @input="ResetError('email')" style="width:240px" required/>
@@ -103,7 +103,7 @@
                 imagechanged: false,
                  form: new Form({
                     id:'',
-                    name : '',
+                     username : '',
                     email: '',
                     password: '',
                      photo:'',

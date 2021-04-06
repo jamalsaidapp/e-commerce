@@ -15,13 +15,13 @@
                 <li class="nav-item dropdown user-menu">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="" aria-expanded="false">
                         <img  class="user-image img-circle elevation-2" :src="this.form.photo === null ? '/img/profile.png' : getProfilePhoto()" alt="User Image">
-                        <span class="d-none d-md-inline">{{this.form.name}} </span>
+                        <span class="d-none d-md-inline">{{this.form.last_name}} {{this.form.first_name}} </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit;right: -15px; top: 39px;">
                         <!-- User image -->
                         <li class="user-header bg-light">
                             <img :src="this.form.photo === null ? '/img/profile.png' : getProfilePhoto()" class="user-image img-circle elevation-2" alt="User Image">
-                            <p>{{this.form.name}}
+                            <p>{{this.form.username}}
                                 <small>{{this.form.email}}</small>
                             </p>
                         </li>
@@ -50,7 +50,9 @@
             return {
                 form: new Form({
                     id:'',
-                    name : '',
+                    username : '',
+                    first_name: '',
+                    last_name: '',
                     email: '',
                     role: '',
                     photo: '',

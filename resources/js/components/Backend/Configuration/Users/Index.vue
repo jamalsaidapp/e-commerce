@@ -90,10 +90,10 @@
             <div class="modal_c_body" id="body">
                 <el-row class="mb-3" :gutter="24">
                     <el-col :span="12">
-                        <b-field label="Nom & Prénom" label-position="on-border" :type="{ 'is-danger': user.errors.has('name') }">
-                            <b-input size="is-small" type="search" v-model="user.name" :disabled="viewmode" @input="ResetError('name')"></b-input>
+                        <b-field label="Nom & Prénom" label-position="on-border" :type="{ 'is-danger': user.errors.has('username') }">
+                            <b-input size="is-small" type="search" v-model="user.username" :disabled="viewmode" @input="ResetError('username')"></b-input>
                         </b-field>
-                        <form-error :form="user" label="name"></form-error>
+                        <form-error :form="user" label="username"></form-error>
                     </el-col>
                     <el-col :span="12">
                         <b-field label-position="on-border" label="Email" :type="{ 'is-danger': user.errors.has('email') }">
@@ -145,7 +145,9 @@ export default {
             tableData:[],
             columns: [
                 {field: 'id', label: '#', width: '50',sortable: true, numeric: true, centered: true, visible: true },
-                {field: 'name', label: 'Utilisateur', width: '200', centered: true, sortable : true, visible: true},
+                {field: 'username', label: 'Username', width: '200', centered: true, sortable : true, visible: true},
+                {field: 'first_name', label: 'First Name', width: '200', centered: true, sortable : true, visible: true},
+                {field: 'last_name', label: 'Last Name', width: '200', centered: true, sortable : true, visible: true},
                 {field: 'email', label: 'Email', width: '250', sortable: true, centered: true, visible: true},
                 {field: 'created_at', label: 'Date Création', width: '150', sortable: true, centered: true, visible: true},
                 {field: 'role', label: 'Role',width: '80', sortable: true, centered: true, visible: true},
@@ -176,7 +178,7 @@ export default {
             TotalItems : 0,
             user: new Form({
                 id : '',
-                name: '',
+                username: '',
                 email: '',
                 password: '',
                 status :undefined,
@@ -200,7 +202,7 @@ export default {
             if(val){
                 let dataSear =  this.tableData.filter(item => {
                     return val.toLowerCase().split(' ').every(v =>
-                        item.name && item.name.toLowerCase().includes(v.toLowerCase()) ||
+                        item.username && item.username.toLowerCase().includes(v.toLowerCase()) ||
                         item.email && item.email.toLowerCase().includes(v.toLowerCase()) ||
                         item.id && item.id.toString().toLowerCase().includes(v.toLowerCase()) ||
                         item.created_at && item.created_at.toString().toLowerCase().includes(v.toLowerCase()) ||
@@ -233,7 +235,7 @@ export default {
                 this.user.clear()
             }
             else if(type === 'edit') {
-                this.title = 'Modifier Utilisateur : ' + val.name;
+                this.title = 'Modifier Utilisateur : ' + val.username;
                 this.editmode = true;
                 this.addmode = false;
                 this.viewmode = false;
@@ -241,7 +243,7 @@ export default {
                 this.user.fill(val);
             }
             else if (type === 'view') {
-                this.title = 'Affichage Utilisateur : ' + val.name;
+                this.title = 'Affichage Utilisateur : ' + val.username;
                 this.viewmode = true;
                 this.addmode = false;
                 this.addmode = false;
