@@ -1,69 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fbb588d-1b17-4131-ad73-63017a63139c" name="Default Changelist" comment="New methode ++">
-      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1617659653.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/flex-slider.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/jquery.fancybox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/magnific-popup.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/niceselect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/owl-carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/slicknav.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/payment-method.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/images/payments.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/active.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/facnybox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/finalcountdown.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/flex-slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/gmap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/jquery-migrate-3.0.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/magnific-popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/map-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/nicesellect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/onepage-nav.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/owl-carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/scrollup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/js/slicknav.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/frontend/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Frontend/Layouts/Body_f.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Frontend/Layouts/Content_f.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Frontend/Layouts/Footer_f.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Frontend/Layouts/Header_f.vue" afterDir="false" />
+    <list default="true" id="16d4b183-c075-4f41-856f-5f654ea66577" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_103303_products_categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_142737_tags.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_143720_products_reviews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1617701605.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ServiceImpl/UserServiceImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ServiceImpl/UserServiceImpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Users/1/Profile/1616587596.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_161510_brands.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_06_142701_products_tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_162809_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_162809_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_163327_orders.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_163335_carts.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Imports/Compenents.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,6 +219,8 @@
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\e-commerce\database\migrations\DoNotMigrate" />
+      <recent name="C:\xampp\htdocs\e-commerce\database\migrations" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\Lib" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\backend" />
     </key>

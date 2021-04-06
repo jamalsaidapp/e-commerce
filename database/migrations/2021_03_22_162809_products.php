@@ -13,28 +13,25 @@ class Products extends Migration
      */
     public function up()
     {
+
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->unsignedBigInteger('user_id');
+            $table->string('title')->unique();
+            $table->string('meta_title')->nullable();
             $table->string('slug')->unique();
-            $table->text('summary');
             $table->longText('description')->nullable();
-            $table->text('photo');
-            $table->integer('stock')->default(1);
             $table->string('size')->default('M')->nullable();
-            $table->enum('condition',['default','new','hot'])->default('default');
-            $table->enum('status',['active','inactive'])->default('inactive');
+            $table->string('color')->default('black')->nullable();
+            $table->string('sku');
             $table->float('price');
-            $table->float('discount')->nullabale();
-            $table->boolean('is_featured')->deault(false);
-            $table->unsignedBigInteger('cat_id')->nullable();
-            $table->unsignedBigInteger('child_cat_id')->nullable();
-            $table->unsignedBigInteger('brand_id')->nullable();
-            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('SET NULL');
-            $table->foreign('cat_id')->references('id')->on('categories')->onDelete('SET NULL');
-            $table->foreign('child_cat_id')->references('id')->on('categories')->onDelete('SET NULL');
+            $table->float('discount')->nullable();
+            $table->smallInteger('quantity');
+            $table->foreignId('products_categories_id')->nullable()->constrained()->references('id')->on('categories')->onDelete('SET NULL');
+//            $table->foreignId('products_tags_id')->nullable()->constrained()->references('id')->on('tags')->onDelete('SET NULL');
             $table->timestamps();
         });
+
     }
 
     /**
