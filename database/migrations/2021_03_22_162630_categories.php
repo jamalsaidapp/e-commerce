@@ -18,6 +18,7 @@ class Categories extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->longText('description')->nullable();
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
         });
     }

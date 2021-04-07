@@ -18,11 +18,7 @@ class Categorie extends Model
     protected $fillable = [
         'title',
         'slug',
-        'summary',
-        'photo',
-        'is_parent',
-        'parent_id',
-        'added_by',
+        'description',
         'status'
     ];
 

@@ -28,32 +28,32 @@ class UserController extends Controller
 
     public function store(UserCreateRequest $request)
     {
-        return $this->userService->CreateUser($request->validated());
+         $this->userService->CreateUser($request->validated());
     }
 
     public function update(UserUpdateRequest $request, User $user)
     {
-        return $this->userService->UpdateUser($request->validated(), $user);
+         $this->userService->UpdateUser($request->validated(), $user);
     }
 
     public function destroy(User $user)
     {
-        return $this->userService->DeleteUser($user);
+         $this->userService->DeleteUser($user);
     }
 
-    public function MultiUserDelete(Request $request): int
+    public function MultiUserDelete(Request $request)
     {
-        return User::destroy($request->ids);
+         User::destroy($request->ids);
     }
 
     public function updateProfile(UserUpdateProfileRequest $request)
     {
-        return $this->userService->UpdateUser($request->validated(), auth()->user());
+         $this->userService->UpdateUser($request->validated(), auth()->user());
     }
 
     public function updateUserImage(Request $request)
     {
-        return $this->userService->UpdateUserImage($request->img);
+         $this->userService->UpdateUserImage($request->img);
     }
 
 }

@@ -111,6 +111,12 @@
                         </b-field>
                         <form-error :form="form" label="status"></form-error>
                     </el-col>
+                    <el-col :span="12">
+                        <b-field label-position="on-border" label="Description" :type="{ 'is-danger': form.errors.has('description') }">
+                            <b-input size="is-small" type="search" v-model="form.description" :disabled="viewmode" @input="ResetError('description')"></b-input>
+                        </b-field>
+                        <form-error :form="form" label="description"></form-error>
+                    </el-col>
                 </el-row>
             </div>
             <div id="footer">
@@ -133,10 +139,7 @@
                 {field: 'id', label: '#', width: '50',sortable: true, numeric: true, centered: true, visible: true },
                 {field: 'title', label: 'Title', width: '100', centered: true, sortable : true, visible: true},
                 {field: 'slug', label: 'Slug', width: '100', sortable: true, centered: true, visible: true},
-                {field: 'summary', label: 'Summary', width: '100', sortable: true, centered: true, visible: false},
-                {field: 'photo', label: 'Image',width: '80', sortable: true, centered: true, visible: true},
-                {field: 'is_parent', label: 'Is_parent',width: '80', sortable: true, centered: true, visible: true},
-                {field: 'added_by', label: 'Added_by',width: '100', sortable: true, centered: true, visible: true},
+                {field: 'description', label: 'Description', width: '200', sortable: true, centered: true, visible: false},
                 {field: 'status', label: 'Status',width: '100', sortable: true, centered: true, visible: true},
             ],
             showhideCols : false,
@@ -162,8 +165,7 @@
                 id : '',
                 title: '',
                 slug: '',
-                summary: '',
-                photo :'',
+                description: '',
                 status:''
             }),
             title: '',
@@ -187,8 +189,8 @@
                         item.title && item.title.toLowerCase().includes(v.toLowerCase()) ||
                         item.slug && item.slug.toLowerCase().includes(v.toLowerCase()) ||
                         item.id && item.id.toString().toLowerCase().includes(v.toLowerCase()) ||
-                        item.summary && item.summary.toString().toLowerCase().includes(v.toLowerCase()) ||
-                        item.added_by && item.added_by.toLowerCase().includes(v.toLowerCase())
+                        item.description && item.description.toString().toLowerCase().includes(v.toLowerCase()) ||
+                        item.status && item.status.toString().toLowerCase().includes(v.toLowerCase())
                     )
                 });
                 this.TotalItems = dataSear.length;
@@ -208,7 +210,7 @@
         //Modal Function
         openmodel(type,val){
             if (type === 'add') {
-                this.title = 'Ajouter Un Utilisateur';
+                this.title = 'Add Category';
                 this.addmode = true;
                 this.viewmode = false;
                 this.editmode = false;
@@ -217,7 +219,7 @@
                 this.form.clear()
             }
             else if(type === 'edit') {
-                this.title = 'Modifier Utilisateur : ' + val.name;
+                this.title = 'edit Category : ' + val.name;
                 this.editmode = true;
                 this.addmode = false;
                 this.viewmode = false;
@@ -225,7 +227,7 @@
                 this.form.fill(val);
             }
             else if (type === 'view') {
-                this.title = 'Affichage Utilisateur : ' + val.name;
+                this.title = 'view category : ' + val.name;
                 this.viewmode = true;
                 this.addmode = false;
                 this.addmode = false;
@@ -245,19 +247,19 @@
             this.form.post('api/categorie').then(()=>{
                 this.loadData();
                 this.dialog_Categorie = false;
-                toast.fire({icon: 'success', title: 'Element Bien Ajouter !!'});
+                toast.fire({icon: 'success', title: 'item Created Successfully !!'});
             })
         },
         editRow(){
             this.form.put('api/categorie/'+this.form.id).then(()=>{
                 this.loadData();
                 this.dialog_Categorie = false;
-                toast.fire({icon: 'success', title: 'Element Bien Modifier !!'});
+                toast.fire({icon: 'success', title: 'item Updated Successfully !!'});
             })
         },
         deleteRow(id){
-                this.$confirm('Voulez-vous Supprimer ce Element ?', 'Suppression', {
-                    confirmButtonText: 'Supprimer', cancelButtonText: 'Annulé', type: 'warning'
+                this.$confirm('Do you want to Delete this item ?', 'Delete', {
+                    confirmButtonText: 'Delete', cancelButtonText: 'Cancel', type: 'warning'
                 }).then(() => {
                     this.form.delete('api/categorie/'+id).then(()=>{
                         this.loadData();

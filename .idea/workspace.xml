@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d4b183-c075-4f41-856f-5f654ea66577" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Users/1/Profile/1617739173.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Categories/CategoryCreateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Categories/CategoryUpadteRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/CategoriesServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ServiceImpl/CategoriesServicesImpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/debugbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/UserCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/UserCreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/UserUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/UserUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_22_162630_categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Profile/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Configuration/Users/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Layouts/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Backend/Shop/Categories.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +187,9 @@
       <path value="$PROJECT_DIR$/vendor/league/event" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
     </include_path>
   </component>
   <component name="ProjectId" id="1q6ZLdq4lYOClHH9dJaAA5FNhBr" />
@@ -195,7 +206,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/User" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -211,11 +222,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\e-commerce\app\Http\Requests\User" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Auth" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\js\components\Backend\Configuration" />
       <recent name="C:\xampp\htdocs\e-commerce\resources\views\frontend" />
-      <recent name="C:\xampp\htdocs\e-commerce\resources\views\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\e-commerce\database\migrations\DoNotMigrate" />
@@ -268,6 +279,7 @@
       <workItem from="1616497453570" duration="716000" />
       <workItem from="1616498208723" duration="11766000" />
       <workItem from="1617739956126" duration="2720000" />
+      <workItem from="1617803802633" duration="4459000" />
     </task>
     <task id="LOCAL-00001" summary="Add user CRUD Table And app.js Organize">
       <created>1616518212041</created>

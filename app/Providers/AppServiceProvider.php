@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Services\CategoriesServices;
+use App\Services\ServiceImpl\CategoriesServicesImpl;
 use App\Services\ServiceImpl\UserServiceImpl;
 use App\Services\UserService;
 use Illuminate\Support\ServiceProvider;
@@ -15,9 +17,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       $this->app->bind(UserService::class , function (){
-           return new UserServiceImpl();
-       });
+        $this->app->bind(UserService::class, function () {
+            return new UserServiceImpl();
+        });
+        $this->app->bind(CategoriesServices::class, function () {
+            return new CategoriesServicesImpl();
+        });
     }
 
     /**

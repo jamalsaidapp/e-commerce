@@ -12,6 +12,7 @@ Route::get('/', function () {
     }
 });
 
+
 //Auth::routes();
 
 Route::get('/login', function () {return view('backend.index');});
@@ -20,3 +21,5 @@ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::get('{path}', [App\Http\Controllers\HomeController::class, 'index'])->where( 'path', '([A-z\/_.\d-]+)?' );
+
+

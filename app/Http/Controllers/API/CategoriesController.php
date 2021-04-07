@@ -3,50 +3,37 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Categories\CategoryCreateRequest;
+use App\Http\Requests\Categories\CategoryUpadteRequest;
 use App\Models\Categorie;
-use Illuminate\Http\Request;
+use App\Services\CategoriesServices;
 
 class CategoriesController extends Controller
 {
-    public function __construct()
+    protected $categorieService;
+
+    public function __construct(CategoriesServices $categorieService)
     {
-        $this->middleware('auth:api',['except' => []]);
+        $this->categorieService = $categorieService;
     }
 
     public function index()
     {
-        return Categorie::latest('id')->get();
+        return $this->categorieService->GetCategories();
     }
 
-    public function store(Request $request){
-
-        $this->validate($request,[
-            'title' => 'required|string|max:50',
-            'slug' => 'required|string|unique:categories',
-            'status' => 'required|string',
-
-        ]);
-
-         Categorie::create($request->all());
-
-    }
-
-    public function update(Request $request, $id)
+    public function store(CategoryCreateRequest $request)
     {
-        $cate = Categorie::findOrFail($id);
-
-        $this->validate($request,[
-            'title' => 'required|string',
-            'slug' => 'required|string|unique:categories,slug,'.$cate->id,
-            'status' => 'required|string',
-        ]);
-
-        $cate->update($request->all());
+        $this->categorieService->CreateCategory($request->validated());
     }
 
-    public function destroy($id)
+    public function update(CategoryUpadteRequest $request, Categorie $categorie)
     {
-        $user = Categorie::findOrFail($id);
-        $user->delete();
+        $this->categorieService->UpdateCategory($request->validated(), $categorie);
+    }
+
+    public function destroy(Categorie $categorie)
+    {
+        $this->categorieService->DeleteCategory($categorie);
     }
 }
